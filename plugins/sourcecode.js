@@ -1,5 +1,6 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, command }) => {
+  let flu = `${pickRandom(['https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text='])}`
 const ultah = new Date('November 4 2022 23:59:59')
     const sekarat = new Date().getTime() 
     const Kurang = ultah - sekarat
@@ -7,9 +8,9 @@ const ohari = Math.floor( Kurang / (1000 * 60 * 60 * 24));
 const ojam = Math.floor( Kurang % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
 const onet = Math.floor( Kurang % (1000 * 60 * 60) / (1000 * 60))
 const detek = Math.floor( Kurang % (1000 * 60) / 1000)
-await conn.sendButtonLoc(m.chat, 'https://telegra.ph/file/c4f267fe6ac16f6b82a4b.jpg',
+await conn.sendButtonLoc(m.chat, await conn.resize(await (await fetch(flu + `${command}`)).buffer(), 300, 200),
 `Hi Kak @${m.sender.split('@')[0]} 
-
+ 
 ◪ 📮 *SCRIPT BOT*
 │ *Script :* 
 │ ╰ https://youtu.be/lDSHQvws9N0
@@ -27,7 +28,7 @@ let res = await fetch(`https://github.com/saipulanuar/Api-Github/raw/main/audio/
 bzz = await res.buffer()
   conn.sendFile(m.chat, bzz, 'haori.mp3', null, m, true, {
 type: 'audioMessage', 
-ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Fory : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@raraharsita2', thumbnail: await (await fetch('https://telegra.ph/file/8d216a35e2ac344d128f8.jpg')).buffer(),}} 
+ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Fory : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@raraharsita2', thumbnail: await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(),}} 
      })
 }
 handler.help = ['sourcecode']
