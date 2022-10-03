@@ -19,14 +19,14 @@ let yts = require('yt-search')
  `.trim() 
      } 
    }).filter(v => v).join('\n┄┈┈┈┈┈┈┈┈┈┈┄┈┈┈┈┈┈┈┈┈┈\n') 
-  conn.sendButtonDoc(m.chat, '*────────「 Youtube Search 」────────*\n\n' + teks, wm, 'Menu', '.menu', m, {quoted: m, contextInfo: { 
+  conn.sendButtonDoc(m.chat, '*─────「 Youtube Search 」─────*\n\n' + teks, wm, 'Menu', '.menu', m, {quoted: m, contextInfo: { 
          externalAdReply: { 
              title: global.wm,
              body: 'Apa Benar Ini Yang Ada Cari?',
              description: 'Apa Benar Ini Yang Ada Cari?', 
              mediaType: 2, 
-           thumbnail: await (await fetch('https://telegra.ph/file/8b361a592d4ee626cc70d.jpg')).buffer(), 
-          mediaUrl: `https://youtu.be/35w7z9QFLwY` 
+           thumbnail: await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(), 
+          mediaUrl: `https://youtu.be/lDSHQvws9N0` 
          } 
       } 
    })
