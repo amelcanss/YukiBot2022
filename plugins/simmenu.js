@@ -53,7 +53,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) =>�
     const jamm = Math.floor( lebih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
     const menitt = Math.floor( lebih % (1000 * 60 * 60) / (1000 * 60))
     const detikk = Math.floor( lebih % (1000 * 60) / 1000)
-    const ultah = new Date('April 5, 2023 23:59:59')
+    const ultah = new Date('November 4, 2022 23:59:59')
     const sekarat = new Date().getTime() 
     const Kurang = ultah - sekarat
     const ohari = Math.floor( Kurang / (1000 * 60 * 60 * 24));
@@ -97,74 +97,69 @@ const fkgif = {
                 },
 	 message: { 
 		"extendedTextMessage": {
-                 "text":`CUTE IQ MD 🌱 ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`,
-                 "title": `CUTE IQ MD 🌱 ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`,
-                 'jpegThumbnail': await (await fetch('https://telegra.ph/file/6f11ac2de8d57a1c831c4.jpg')).buffer()
+                 "text":`YukiBot MD 🌱 ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`,
+                 "title": `YukiBot MD 🌱 ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`,
+                 'jpegThumbnail': await conn.resize(await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(), 300, 250)
                         }
 	                  } 
                      }
                      
                      let tksk = `${pe}${ucapan()}, @${m.sender.split`@`[0]} ${pickRandom(['😅', '🥰', '😜'])}${pe}
 
-●────━───༺༻───━────●
-                *《 BOT INFO 》*
-⚘ *Bot Name: CUTE IQ-MD IQ MD*
-⚘ *Creator: Stah Ziv San*
-⚘ *Contact Owner Bot*
-*http://wa.me/16199961931*
-⚘ *Tanggal: ${date}*  
-⚘ *Jam: ${time} WIB*
-⚘ *Status: 「 ${mode} 」*
-⚘ *Prefix: 「 MULTI PREFIX 」*
-
-●────━───༺༻───━────●
-           *《 INFO WAKTU 》*
-✧ 𝙏𝘼𝙃𝙐𝙉 𝘽𝘼𝙍𝙐
-_*${jhari} Hari ${jjam} Jam ${mmmenit} Menit ${ddetik} Detik*_
-✧ 𝙍𝘼𝙈𝘼𝘿𝘼𝙉
-_*${harii} Hari ${jamm} Jam ${menitt} Menit ${detikk} Detik*_ 
-✧ 𝙉𝘼𝙏𝘼𝙇
-_*${nhari} Hari ${njam} Jam ${nmenit} Menit ${mdetek} Detik*_ 
-✧ 𝙐𝙇𝘼𝙉𝙂 𝙏𝘼𝙃𝙐𝙉 𝙊𝙒𝙉𝙀𝙍 
-_*${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik*_
-●────━───༺༻───━────●
-
-❉───────────────────❉
-               *《 USER INFO 》*
-◦ *Nama: ${name}*
-◦ *Status :* ${premium ? 'Premium' : 'Free'} User
-◦ *Limit: ${limit}*
-◦ *Your Api:* wa.me/${m.sender.split('@')[0]}
-
-             *《 YOUR PROGRESS 》*
-◦ *Level: ${level}*
-◦ *XP: ${exp}*
-◦ *Rank: ${role}*
-
-●────━───༺༻───━────●
-             *《 BOT STATUS 》*
-❏ *Runtime ${uptime}*
-𒍮 *User Register: ${totalreg}*
-●────━───༺༻───━────●`
+┏━━━ꕥ〔 *BOT INFO* 〕ꕥ━⬣
+┃✾ *Bot Name:* ${namabot}
+┃✾ *Creator:* King Of Bear
+┃✾ *Contact Owner Bot:*
+┃http://wa.me/6288279268363
+┃✾ *Tanggal:* ${date}
+┃✾ *Jam:* ${time} WIB
+┃✾ *Status:* 「 ${mode} 」
+┃✾ *Prefix:* 「 MULTI PREFIX 」
+┗━ꕥ
+┏━━━ꕥ〔 *INFO WAKTU* 〕ꕥ━⬣
+┃✾ 𝙏𝘼𝙃𝙐𝙉 𝘽𝘼𝙍𝙐
+_${jhari} Hari ${jjam} Jam ${mmmenit} Menit ${ddetik} Detik_
+┃✾ 𝙍𝘼𝙈𝘼𝘿𝘼𝙉
+_${harii} Hari ${jamm} Jam ${menitt} Menit ${detikk} Detik_ 
+┃✾ 𝙉𝘼𝙏𝘼𝙇
+_${nhari} Hari ${njam} Jam ${nmenit} Menit ${mdetek} Detik_ 
+┃✾ 𝙐𝙇𝘼𝙉𝙂 𝙏𝘼𝙃𝙐𝙉 𝙊𝙒𝙉𝙀𝙍 
+_${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik_
+┗━ꕥ
+┏━━━ꕥ〔 *USER INFO* 〕ꕥ━⬣
+┃✾ *Nama:* ${name}
+┃✾ *Status:* ${premium ? 'Premium' : 'Free'} User
+┃✾ *Limit:* ${limit}
+┃✾ *Your Api:* wa.me/${m.sender.split('@')[0]}
+┗━ꕥ
+┏━ꕥ〔 *YOUR PROGRESS* 〕ꕥ━⬣
+┃✾ *Level:* ${level}
+┃✾ *XP:* ${exp}
+┃✾ *Rank:* ${role}
+┗━ꕥ
+┏━━━ꕥ〔 *BOT STATUS* 〕ꕥ━⬣
+┃✾ *Runtime:* ${uptime}
+┃✾ *User Register:* ${totalreg}
+┗━━━━━━ꕥ`
 
 let ftt = `*Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner
 
  *Official Bot By @${'0'.split('@')[0]}* 
- *Powered By @${'16199961931'.split('@')[0]}*`
+ *Powered By @${'6288279268363'.split('@')[0]}*`
        let judul = `${ucapanl()}`.trim() 
        const sections = [
                               {
                                 "rows": [{
                                          "title": "📊 › Status ",
-                                         "description": "Status カ CUTE IQ-MD",
+                                         "description": "Status カ YukiBot-MD",
                                          "rowId": ".botstat"
                                     }, {
                                          "title": "⚡› Speed ",
-                                         "description": "Menampilkan Kecepatan Respon カ CUTE IQ-MD",
+                                         "description": "Menampilkan Kecepatan Respon カ YukiBot-MD",
                                          "rowId": ".ping"
                                     }, {
                                          "title": "🗒️› Info ",
-                                         "description": "Menampilkan Info カ CUTE IQ-MD",
+                                         "description": "Menampilkan Info カ YukiBot-MD",
                                          "rowId": ".info"
                                     }, {
                                          "title": "🎐 › Developer Bot ",
@@ -318,13 +313,13 @@ let ftt = `*Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan sil
                                 }, {
                                 "rows": [{                                	
                                 "title": "📝 ∫  Catatan Perubahan ",
-                                "description": "Last Update Terakhir Di CUTE IQ-MD",
+                                "description": "Last Update Terakhir Di YukiBot-MD",
                                 "rowId": ".notes"                  
                 }],                
                                 "title": "▮Last Update 」"
                                 }, {
                                 "rows": [{                                	
-                  "title": "「 🗨️ 」› Ziv Chat ",
+                  "title": "「 🗨️ 」› King Of Bear Chat ",
                   "description": "Mengobrol Dengan Orang Lain",
                   "rowId": ". start"
                 }],
