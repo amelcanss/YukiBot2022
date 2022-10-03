@@ -1,45 +1,47 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn, usedPrefix, text, command, args }) => {
-	let ftroli = {
+
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+bear = "VBkM7rbU";
+  if (!text) return conn.reply(m.chat, `Gunakan format: ${usedPrefix}${command} Colin Changed`, m)
+
+  await conn.sendButtonLoc(m.chat, 'https://telegra.ph/file/5a46383499a405792185b.jpg', 'Searching...', wm2, 'Owner', '.owner', m)
+    let res = await fetch(`https://saipul-anuar.herokuapp.com/api/tiktok?url=${text}&apikey=${bear}`)
+    let json = await res.json()
+    if (res.status !== 200) throw await res.text()
+    if (!json.status) throw json
+const ftrol = {
     key : {
     remoteJid: 'status@broadcast',
     participant : '0@s.whatsapp.net'
     },
     message: {
     orderMessage: {
-    itemCount : 9999999,
-    status: 404,
-    surface : 404,
-    message: `❏ TIKTOK DOWNLOADER`, 
-    orderTitle: `▮Menu ▸`,
-    thumbnail: await (await fetch('https://telegra.ph/file/c2c7057129ff6f42095b8.jpg')).buffer(), //Gambarnye
+    itemCount : 2022,
+    status: 1,
+    surface : 1,
+    message: `Search Tiktok NoWM 🔍`, 
+    orderTitle: ``,
+    thumbnail: await (await fetch('https://telegra.ph/file/f13cee700cf48fdda942d.jpg')).buffer(), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
     }
-    let res = await fetch(`https://botcahx-rest-api.herokuapp.com/api/dowloader/tikok?url=${args[0]}`)
-    let json = await res.json()
-    if (!json.status) return conn.sendButtonLoc(m.chat, 'https://telegra.ph/file/fd56c12d665a14793a1fb.jpg', `Harap masukkan URL sebagai parameter.\n\nContoh: ${usedPrefix + command} https://vt.tiktok.com/ZSdpHWxxG/?k=1`, wm, 'Sip', 'Ok', m)
-    let data = json.result
-    let video = data.video
-    let thumb = await (await fetch(data.thumb)).buffer()
-    let tag = `@${m.sender.split('@')[0]}`
-    conn.reply(m.chat, '*WAIT! | Mohon Tunggu Sebentar...*', m, {quoted: m, thumbnail: await (await fetch('https://telegra.ph/file/b9a32ee41970d7a71b476.jpg')).buffer(), contextInfo: { externalAdReply: {title: 'Lagi Memuat Data', sourceUrl: 'https://vt.tiktok.com/ZSdnasM19/', body: '© 𝙷𝚊𝚘𝚛𝚒𝚋𝚘𝚝𝚣 𝙱𝚢 𝚉𝚒𝚟𝚏𝚞𝚛𝚛', thumbnail: await (await fetch('https://telegra.ph/file/7d3c2136bec2eaec00f2e.jpg')).buffer(),}}})
-let txt = `Hai Kak ${tag}, Videonya Udah Jadi Nih, Kalau Mau Versi Ekstensi Lain, Pilih Dibawah Ya` 
-    await conn.sendButtonVid(m.chat, video, txt, 'Mau Ganti Ke Versi Music Klik Dibawah', `Audio`, `.tiktokaudio ${args[0]}`, 0, { quoted: ftroli,
-    contextInfo: { forwardingScore: 99999, isForwarded: true,
-        externalAdReply: {
-        	sourceUrl: 'https://vt.tiktok.com/ZSRRmS8vh/',
-            title: 'Tiktok Downloader 🎥',
-            body: wm2,
-          thumbnail: thumb
-        }
-     }
-    })
- } 
-handler.help = ['tiktok'].map(v => v + ' <url>')
-handler.tags = ['downloader']
-
-handler.command = /^((tt|tiktok)?(dl)?)$/i
-
-module.exports = handler
+    conn.sendButtonVid(m.chat, json.result.video, `Nih Kak @${m.sender.split`@`[0]}`, wm, 'Audio', `!tiktokmp3 ${text}`, m, {
+    quoted: ftrol, contextInfo: { forwardingScore: 99999, isForwarded: true,
+         externalAdReply: { 
+             title: global.wm,
+             body: 'Apa Benar Ini Yang Ada Cari?',
+             description: 'Apa Benar Ini Yang Ada Cari?', 
+             mediaType: 2, 
+           thumbnail: await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(), 
+          mediaUrl: `https://youtu.be/PPLlC5NWAuE` 
+         } 
+      } 
+   })
+}
+handler.help = ['tiktok <keyword>'] 
+ handler.limit = true 
+ handler.tags = ['downloader'] 
+ handler.command = /^(tiktok)$/i 
+  
+ module.exports = handler
