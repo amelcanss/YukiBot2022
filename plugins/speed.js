@@ -9,6 +9,8 @@ let format = sizeFormatter({
   render: (literal, symbol) => `${literal} ${symbol}B`,
 })
 let handler = async (m, { conn, usedPrefix }) => {
+  let sender = m.sender
+    let pp = await conn.profilePictureUrl(sender, 'image').catch((_) => "https://telegra.ph/file/24fa902ead26340f3df2c.png")
 	let tag = `@${m.sender.split('@')[0]}`
  m, { contextInfo: { mentionedJid: conn.parseMention(tag) }}
 	let waofc = `@${'0'.split('@')[0]}`
@@ -26,7 +28,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     surface : 1,
     message: `⚡ Speed ${await conn.getName(conn.user.jid)}`, 
     orderTitle: ``,
-    thumbnail: await (await fetch('https://telegra.ph/file/6e083ec916dce9821fc2e.jpg')).buffer(), //Gambarnye
+    thumbnail: await conn.resize(await (await fetch(pp)).buffer(), 300, 300), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
@@ -88,10 +90,10 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
      quoted: ftrol,
      contextInfo: { forwardingScore: 99999, isForwarded: true, 
          externalAdReply: { 
-                 sourceUrl: 'https://vt.tiktok.com/ZSRRmS8vh/', 
+                 sourceUrl: 'https://www.tiktok.com/@raraharsita2/video/7144195854117637402?is_from_webapp=1&sender_device=pc&web_id=7145823156417267202', 
              title: `Merespon dalam ${speed} milidetik`, 
-             body: '© Cute IQ-MD By Ziv San', 
-           thumbnail:  await (await fetch(fla + 'Ping')).buffer()
+             body: '© YukiBot-MD By King Of Bear', 
+           thumbnail: await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer()
              } 
       } 
      }) 
