@@ -33,6 +33,7 @@ global.timestamp = {
 }
 
 const PORT = process.env.PORT || 3000
+require("http").createServer((_, res) => res.end("Uptime!")).listen(8080)
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 // console.log({ opts })
@@ -133,17 +134,9 @@ global.reloadHandler = function (restatConn) {
   }
 
   conn.welcome = `*Hai @user ! 👋*
-         ‷✧ Selamat Datang di Grup
-           *@subject*
+‷✧ Selamat Datang di Grup *@subject*
            
-╭◪ *Intro Member Baru* ◪─
-│ ✧ *Nama:*
-│ ✧ *Umur:*
-│ ✧ *Status:*
-│ ✧ *Askot:*
-╰◪
-  
-              *◌  ⃝✧⪼ Deskripsi Group ミ*
+*◌  ⃝✧⪼ Deskripsi Group ミ*
   @desc`
   conn.bye = 'Selamat tinggal @user!'
   conn.spromote = '@user sekarang admin!'
