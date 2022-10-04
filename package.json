@@ -1,5 +1,5 @@
 {
-    "name": "Raxcel-MD",
+    "name": "YukiBot-MD",
     "version": "2.2.5",
     "description": "Simple Bot WhatsApp with Baileys Multi Device",
     "depecrated": false,
@@ -30,7 +30,7 @@
     ],
     "homepage": "https://github.com/Kangsad01/bot-md",
     "author": {
-        "name": "Kangsad01"
+        "name": "King Of Bear"
     },
     "repository": {
         "type": "git",
@@ -43,7 +43,7 @@
     "dependencies": {
         "@adiwajshing/baileys": "^4.1.0",
         "@adiwajshing/keyed-db": "^0.2.4",
-        "@bochilteam/scraper": "2.0.0",
+        "@bochilteam/scraper": "^2.0.0",
         "awesome-phonenumber": "^2.69.0",
         "axios": "^0.26.0",
         "caliph-api": "^0.7.6",
