@@ -10,7 +10,7 @@ RUN apt-get update && \
 
 COPY package.json .
 
-RUN npm install && npm update && npm i pm2 -g && pm2 install ffmpeg && pm2 start main.js && pm2 save && pm2 logs
+RUN npm install
 
 COPY . .
 
