@@ -69,3 +69,4 @@ function start(file) {
 }
 
 start('main.js')
+ 
