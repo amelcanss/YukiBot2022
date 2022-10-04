@@ -28,21 +28,21 @@ module.exports = {
         global.fake = global.fake
         global.fkontak = global.fkontak
         global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
-        global.img = 'https://telegra.ph/file/0c567eac403737766688f.jpg'
+        global.img = 'https://i.ibb.co/jfZVKmC/babi2.jpg'
         global.fla = pickRandom(global.flaaa)
         global.namabot = conn.user.name
-        global.packname = '© CUTE IQ-MD'
-        global.author = 'Made By Ziv San © 2022'
+        global.packname = '© YukiBot-MD'
+        global.author = 'Made By King Of Bear © 2022'
         global.packname2 = 'Made With'
-        global.author2 = 'Cute Bot By Ziv San © 2022'
-        global.wm3 = '·͟͟͟͟͟͟͞͞͞͞͞͞Made By Ziv San˚'
-        global.wm2 = '© CUTE IQ-MD' + ' ' + 'By Ziv San'
-        global.wm = '© CUTE IQ-MD'
+        global.author2 = 'YukiBot By King Of Bear © 2022'
+        global.wm3 = '·͟͟͟͟͟͟͞͞͞͞͞͞Made By King Of Bear˚'
+        global.wm2 = '© YukiBot-MD' + ' ' + 'By King Of Bear'
+        global.wm = '© YukiBot-MD'
         global.colong1 = 'Ciss 📸'
-        global.colong2 = 'By Haori & Ziv San'
+        global.colong2 = 'By yukiBot & King Of Bear'
         global.kontak2 = [
-        ['16199961931', 'Ziv San', 'Creator Bot', 'Zivsan@support.com', true],
-        ['6282179137771', 'CUTE IQ-MD', 'Bot WhatsApp', 'Just Bot', true]
+        ['6288279268363', 'King Of Bear', 'Creator Bot', 'KingOfBear@support.com', true],
+        ['13146176930', 'YukiBot-MD', 'Bot WhatsApp', 'Just Bot', true]
         ]
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
@@ -637,13 +637,7 @@ module.exports = {
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
                                 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-                            let wel = API('hardianto', '/api/welcome3', {
-                                profile: pp,
-                                name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/a36809ab7862a77d18ac0.jpg',
-                                namegb: await this.getName(id),
-                                member: groupMetadata.participants.length
-                            })
+                            let wel = `https://saipulanuar.herokuapp.com/api/card/welcome3?username=saipul&memberCount=001&gcname=KingOfBear&bg=https://i.ibb.co/6YQxKvt/babi.jpg&pp=https://i.ibb.co/6YQxKvt/babi.jpg&gcicon=https://i.ibb.co/6YQxKvt/babi.jpg&apikey=KingOfBear`
                             let lea = API('hardianto', '/api/goodbye3', {
                                 profile: pp,
                                 name: await this.getName(user),
@@ -652,7 +646,7 @@ module.exports = {
                                 member: groupMetadata.participants.length
                             })
                             /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
-   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'Cute IQ-MD', fkontak,{
+   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'Selamat Datang' : 'Sampai Jumpa', action === 'add' ? '.intro' : 'YukiBot-MD', fkontak,{
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
     mediaUrl: linkyt,
@@ -660,7 +654,7 @@ module.exports = {
     description: deslink , 
     title: titlink,
     body: wm,
-    thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
+    thumbnail: await(await fetch(action === 'add' ? pp : pp)).buffer(),
     sourceUrl: linkgc
      }}
   })
@@ -799,7 +793,7 @@ function clockString(ms) {
   }
 
 function pickRandom(list) {
-  return list[Math.floor(Math.random() * list.length)]
+  return list[Math.floor(Math.random() * (list.length))]
 }
 
 global.thumb = 'https://telegra.ph/file/61f2d6d9694b49a2ce7aa.jpg'
