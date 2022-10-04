@@ -14,7 +14,7 @@ let handler = async(m, { conn }) => {
     surface : 404,
     message: `Nih My Mastah :3`, 
     orderTitle: ``,
-    thumbnail: await (await fetch('https://telegra.ph/file/7501d485189f34dc429a7.jpg')).buffer(), //Gambarnye
+    thumbnail: await conn.resize(await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(), 300, 200), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
@@ -31,8 +31,8 @@ let handler = async(m, { conn }) => {
   return conn.sendButtonDoc(m.chat, `Hay kak @${await m.sender.split('@')[0]}, itu nomor ownerku jangan dispam yah ^_^`, 'Itu Owner Ku Yah Kak Jangan Sungkem Untuk Chat ;3','Credits', '.tqto', m, { quoted: conn.p[id][0],
     contextInfo: { //forwardingScore: 99999, isForwarded: true,
         externalAdReply: { //showAdAttribution: true,
-        	sourceUrl: 'https://vt.tiktok.com/ZSRRmS8vh/',
-            title: 'Jangan Bully Zivfurr Dia Kang Kopas <3',
+        	sourceUrl: 'https://vt.tiktok.com/ZSRx2cB4C/',
+            title: 'Jangan Bully King Of Bear Dia Kang Kopas <3',
             body: 'Follow Tiktok Pacar Saya Bang',
           thumbnail: await (await fetch(pp)).buffer()
         }
