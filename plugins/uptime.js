@@ -7,11 +7,11 @@ let fetch = require("node-fetch")
 let who = m.sender
 let time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
 let runnya = `
-*───「 RUNTIME BOT 」───*
-
-⏲️ Waktu: ${time} WIB
-💌 Aktif Selama : ${uptime}
-🌹 Tag : @${who.split`@`[0]}`
+┏━━━ꕥ〔 *RUNTIME BOT* 〕ꕥ━⬣
+┃✾ ⏲️ Waktu: ${time} WIB
+┃✾ 💌 Aktif Selama : ${uptime}
+┃✾ 🌹 Tag : @${who.split`@`[0]}
+┗━━━━━━ꕥ`
 conn.sendButton(m.chat, runnya, wm, 'Menu', '.menu', { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `Simpel Bot Whatsapp`, itemCount: 99999, thumbnail: await conn.resize(await (await fetch(pp)).buffer(), 300, 300),}}})
 }
 handler.help = ['runtime']
