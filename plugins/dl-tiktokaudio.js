@@ -1,5 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
+  bear = "VBkM7rbU";
   if (!args[0]) throw 'Uhm...url nya mana?'
  let chat = global.db.data.chats[m.chat]
     m.reply(wait)
@@ -15,9 +16,12 @@ await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
     sourceUrl: linkgc
      }}
   })
-    let url = `https://api.lolhuman.xyz/api/tiktokwm?apikey=9b817532fadff8fc7cb86862&url=${args[0]}`
+    let url = await fetch(`https://zenzapis.xyz/downloader/musically?apikey=${bear}&url=${args[0]}`)
+  let json = await url.json()
+    if (url.status !== 200) throw await url.text()
+    if (!json.status) throw json
 let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
-    await conn.sendFile(m.chat, `https://api.lolhuman.xyz/api/tiktokwm?apikey=9b817532fadff8fc7cb86862&url=${args[0]}`, 'tiktokaudio.mp3', `
+    await conn.sendFile(m.chat, json.result.audio, 'tiktokaudio.mp3', `
 ┏┉━━━━━━━━━━━❏
 ┆ *YOUTUBE MP3*
 ├┈┈┈┈┈┈┈┈┈┈┈
@@ -26,7 +30,7 @@ let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.
 ┆• *📥 Ukuran File:* 
 └❏
 `.trim(), m, null, {
-   document: { url: `https://api.lolhuman.xyz/api/tiktokwm?apikey=9b817532fadff8fc7cb86862&url=${args[0]}`}, mimetype: 'audio/mpeg', fileName: 'tiktok.mp3', conntextInfo: {
+   document: { url: `https://zenzapis.xyz/downloader/musically?apikey=${bear}&url=${args[0]}`}, mimetype: 'audio/mpeg', fileName: 'tiktok.mp3', conntextInfo: {
         externalAdReply: {
             title: '▶︎ ━━━━━━━•────────────────── ', 
             body: 'Now Playing...',
