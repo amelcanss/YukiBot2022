@@ -3,29 +3,28 @@ const cheerio = require('cheerio')
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   if (!args || !args[0]) throw `Gunakan format ${usedPrefix}${command} [username]
-Contoh: ${usedPrefix}${command} jokowi
+Contoh: ${usedPrefix}${command} drak_ipul123
 `.trim()
   let res = await igstalk(args[0])
+  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
   let json = JSON.parse(JSON.stringify(res))
-  let iggs = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *INSTAGRAM STALK*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴
- ✽̶⌣ ✽̶
-
-_*• Username*_ : ${json.username}
-_*• Nickname*_ : ${json.fullName}
-_*• Followers*_ : ${json.followersM}
-_*• Following*_ : ${json.followingM}
-_*• Posting*_ : ${json.postsCountM}
-_*• Bio*_ : ${json.bio}
-_*• Link User*_ : https://instagram.com/${json.username}`.trim() // tambahin sendiri json.blablabla :)
+  let iggs = `
+┏━ꕥ *INSTAGRAM STALK* ꕥ━⬣
+┃✾ *Username:* ${json.username}
+┃✾ *Nickname:* ${json.fullName}
+┃✾ *Followers:* ${json.followersM} Followers
+┃✾ *Following:* ${json.followingM} Following
+┃✾ *Posting:* ${json.postsCountM} Postingan
+┃✾ *Link:* https://instagram.com/${json.username}
+┃✾ *Bio:* ${json.bio}
+┗━❑
+`.trim() // tambahin sendiri json.blablabla :)
   conn.sendFile(m.chat, json.profilePicHD, 'error.jpg', iggs, m)
 }
 handler.help = ['igstalk <username>']
-handler.tags = ['tools']
+handler.tags = ['stalk']
 handler.command = /^(igstalk)$/i
-handler.limit = true
-
+handler.limit = 3
 module.exports = handler
 
 async function igstalk(username) {
