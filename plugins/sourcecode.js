@@ -11,12 +11,12 @@ const detek = Math.floor( Kurang % (1000 * 60) / 1000)
 await conn.sendButtonLoc(m.chat, await conn.resize(await (await fetch(flu + `${command}`)).buffer(), 300, 200),
 `Hi Kak @${m.sender.split('@')[0]} 
  
-◪ 📮 *SCRIPT BOT*
-│ *Script :* 
-│ ╰ https://youtu.be/lDSHQvws9N0
-│ *Tiktok :*  
-│ ╰ https://www.tiktok.com/@raraharsita2/video/7144195854117637402
-╰──────────═┅═──────────
+┏━━━ꕥ〔 *SCRIPT BOT* 〕ꕥ━⬣
+┃✾ 📮*Script :* 
+┃✾ ╰ https://youtu.be/lDSHQvws9N0
+┃✾ 📮*Tiktok :*  
+┃✾ ╰ https://www.tiktok.com/@raraharsita2/video/7144195854117637402
+┗━━━━━━ꕥ
 `,`📍 *N o t e :* 
 • Jangan lupa minta izin owner sebelum menggunakan scriptnya kak!
 • Jangan Lupa kasih Like & Follow My Tiktok
