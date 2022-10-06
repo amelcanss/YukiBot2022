@@ -26,7 +26,7 @@ const ftrol = {
     }
     }
     }
-    conn.sendButtonVid(m.chat, json.result.video, `Nih Kak @${m.sender.split`@`[0]}`, wm, 'Audio', `!tiktokmp3 ${text}`, m, {
+    conn.sendButtonVid(m.chat, json.result.nowm, `Nih Kak @${m.sender.split`@`[0]}`, wm, 'Audio', `!tiktokmp3 ${text}`, m, {
     quoted: ftrol, contextInfo: { forwardingScore: 99999, isForwarded: true,
          externalAdReply: { 
              title: global.wm,
