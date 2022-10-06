@@ -1,7 +1,7 @@
 let levelling = require('../lib/levelling') 
  let fs = require('fs') 
  let path = require('path') 
- let fetch = require('node-fetch') 
+ let fetch = require('node-fetch') 
  let moment = require('moment-timezone') 
  let jimp = require('jimp') 
  let PhoneNumber = require('awesome-phonenumber') 
@@ -20,7 +20,7 @@ ${'```%npmdesc```'}
   
    let tags 
    let teks = `${args[0]}`.toLowerCase() 
-   let array = ['all', 'absen', 'rpg', 'anime', 'downloader', 'game', 'fun', 'xp', 'github', 'group', 'image', 'quotes', 'admin', 'info', 'internet', 'islam', 'cristian', 'kerang', 'maker',  'sound', 'vn', 'furry', 'owner', 'suara', 'premium', 'quotes', 'info', 'stalk', 'shortlink', 'sticker', 'tools', 'text', 'nsfw', 'asupan', 'random', 'textpro', 'photooxy'] 
+   let array = ['all', 'absen', 'rpg', 'anime', 'downloader', 'game', 'fun', 'xp', 'github', 'group', 'image', 'quotes', 'admin', 'info', 'internet', 'quran', 'cristian', 'kerang', 'maker',  'sound', 'vn', 'furry', 'owner', 'suara', 'premium', 'quotes', 'info', 'stalk', 'shortlink', 'sticker', 'tools', 'text', 'nsfw', 'asupan', 'random', 'textpro', 'photooxy'] 
    if (!array.includes(teks)) teks = '404' 
    if (teks == 'all') tags = { 
    'main': 'UTAMA', 
@@ -37,7 +37,7 @@ ${'```%npmdesc```'}
    'image': 'IMAGE', 
    'info': 'INFO', 
    'internet': 'INTERNET', 
-   'islam': 'ISLAMI', 
+   'quran' : 'ISLAMI', 
    'cristian': 'CRISTIAN',
    'kerang': 'KERANG', 
    'maker': 'MAKER', 
@@ -99,8 +99,8 @@ ${'```%npmdesc```'}
    if (teks == 'internet') tags = { 
    'internet': 'INTERNET', 
    } 
-   if (teks == 'islam') tags = { 
-   'islam': 'ISLAMI', 
+   if (teks == 'quran') tags = { 
+   'quran': 'ISLAMI', 
    } 
    if (teks == 'cristian') tags = { 
      'cristian': 'Cristian'
@@ -202,7 +202,8 @@ ${'```%npmdesc```'}
        second: 'numeric' 
      }) 
      let flu = `${pickRandom(['https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text='])}`
-     let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss') 
+     let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+     const wib2 = moment.tz('Asia/Jakarta').format('HH:mm:ss')
      let wibh = moment.tz('Asia/Jakarta').format('HH') 
      let wibm = moment.tz('Asia/Jakarta').format('mm') 
      let wibs = moment.tz('Asia/Jakarta').format('ss') 
@@ -223,7 +224,7 @@ ${'```%npmdesc```'}
      const jamm = Math.floor( lebih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)) 
      const menitt = Math.floor( lebih % (1000 * 60 * 60) / (1000 * 60)) 
      const detikk = Math.floor( lebih % (1000 * 60) / 1000) 
-     const ultah = new Date('October 1 2022 23:59:59')
+     const ultah = new Date('November 4 2022 23:59:59')
     const sekarat = new Date().getTime() 
     const Kurang = ultah - sekarat
     const ohari = Math.floor( Kurang / (1000 * 60 * 60 * 24));
@@ -282,7 +283,7 @@ ${'```%npmdesc```'}
     itemCount : 2022,
     status: 1,
     surface : 1,
-    message: `CUTE IQ-MD By Ziv San`, 
+    message: `YukiBot By KingOfBear`, 
     orderTitle: `▮Menu ▸`,
     thumbnail: await (await fetch('https://telegra.ph/file/db5b4aed0d6d2e6c10c8f.jpg')).buffer(), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
@@ -317,10 +318,29 @@ ${'```%npmdesc```'}
        } 
      }) 
      if (teks == '404') {
- 	let cute = `${pickRandom(['https://telegra.ph/file/dc8b3a29b4b2c770d1727.jpg', 'https://telegra.ph/file/dc8b3a29b4b2c770d1727.jpg', 'https://telegra.ph/file/1767c5d6b71e200231ca6.jpg', 'https://telegra.ph/file/13488976473884608c03c.jpg','https://telegra.ph/file/21329b42e497787e3c2c2.jpg','https://telegra.ph/file/6999d6a56326852484746.jpg', 'https://telegra.ph/file/5df66151d217bb5cd1627.jpg', 'https://telegra.ph/file/c71a6b41795ab649daef7.jpg', 'https://telegra.ph/file/c9a695262426ed4e8b3b8.jpg'])}` 
- 	let ori = `Hi Kak, @${m.sender.split`@`[0]}
- 
-Saya Adalah Cute Bot Salah Satu Bot Whatsapp Yang Siap Membantu Kamu Mempermudah Sesuatu Seperti Membuat Sticker Dan Lainnya, Kalo Kamu Mau Request Fitur Silahkan Ketik #request Pesan Atau Fitur Yang Kamu Inginkan!`
+ 	let cute = `${pickRandom(['https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear','https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear','https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear'])}` 
+ 	let ori = `┏━━━ꕥ〔 *${namabot}* 〕ꕥ━⬣
+┃✾ Hai, @${m.sender.split`@`[0]}!
+┃
+┃✾ Tersisa *${limit} Limit*
+┃✾ Role *${role}*
+┃✾ Level *${level}* 
+┃✾ XP: *TOTAL ${exp} (${exp - min} / ${xp})*
+┗━ꕥ
+┏━ꕥ 
+┃✾ Hari : *${week} ${weton}* 
+┃✾ Tanggal : *${date}*
+┃✾ Tanggal Islam : *${dateIslamic}*
+┃✾ Jam : *${wib2} WIB*
+┗━ꕥ  
+┏━ꕥ
+┃✾ Uptime: *${uptime} (${muptime})*
+┃✾ Database: ${rtotalreg} dari ${totalreg}
+┃✾ Youtube:
+┃✾ https://youtu.be/lDSHQvws9N0
+┗━━━━━━ꕥ
+━━━ꕥ〔 _*Quotes Harian*_ 〕ꕥ━⬣
+“${pickRandom(global.quotes)}”`.trim()
 conn.sendMessage(m.chat, {
     	react: {
     		text: emot,
@@ -410,9 +430,11 @@ await conn.send2ButtonLoc(m.chat, await conn.resize(await (await fetch(flu + te
       } 
      })*/
      //conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m).catch(_ => conn.reply(m.chat, text.trim(), m))
-  conn.sendFile(m.chat, 'https://a.uguu.se/jvdOuNWe.mp3', 'haori.mp3', null, m, true, {
+     let res = await fetch(`https://github.com/saipulanuar/Api-Github/raw/main/audio/Donasiku.mp3`)
+    bzz = await res.buffer()
+  conn.sendFile(m.chat, bzz, 'haori.mp3', null, m, true, {
 type: 'audioMessage', 
-ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Fory : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@fory_whitecattiktok?_t=8V5TGON5rgv&_r=1', thumbnail: await (await fetch('https://telegra.ph/file/8d216a35e2ac344d128f8.jpg')).buffer(),}} 
+ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Fory : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@raraharsita2', thumbnail: await (await fetch('https://telegra.ph/file/8d216a35e2ac344d128f8.jpg')).buffer(),}} 
      })
 } catch (e) { 
      conn.reply(m.chat, 'Maaf, menu sedang error', m) 
@@ -517,3 +539,89 @@ ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Fory : ${ohari} 
      await welcome.print(font, 650, 575, PhoneNumber('+' + m.sender.split('@')[0]).getNumber('international')) 
      return await welcome.composite(avatar, 50, 170).getBufferAsync('image/png') 
  }
+function pickRandom(list) {
+  return list[Math.floor(list.length * Math.random())]
+}
+
+// https://jalantikus.com/tips/kata-kata-bucin/
+global.quotes = [
+    "Segala sesuatu memiliki kesudahan, yang sudah berakhir biarlah berlalu dan yakinlah semua akan baik-baik saja", 
+    "Setiap detik sangatlah berharga karena waktu mengetahui banyak hal, termasuk rahasia hati.", 
+    "Jika kamu tak menemukan buku yang kamu cari di rak, maka tulislah sendiri.",
+    "Jika hatimu banyak merasakan sakit, maka belajarlah dari rasa sakit itu untuk tidak memberikan rasa sakit pada orang lain.",
+    "Hidup tak selamanya tentang pacar.",
+    "Rumah bukan hanya sebuah tempat, tetapi itu adalah perasaan.",
+    "Pilih mana: Orang yang memimpikan kesuksesan atau orang yang membuatnya menjadi kenyataan?",
+    "Kamu mungkin tidak bisa menyiram bunga yang sudah layu dan berharap ia akan mekar kembali, tapi kamu bisa menanam bunga yang baru dengan harapan yang lebih baik dari sebelumnya.",
+    "Bukan bahagia yang menjadikan kita bersyukur, tetapi dengan bersyukurlah yang akan menjadikan hidup kita bahagia.",
+    "Aku memang diam. Tapi aku tidak buta.",
+    "Keyakinan merupakan suatu pengetahuan di dalam hati, jauh tak terjangkau oleh bukti.",
+    "Rasa bahagia dan tak bahagia bukan berasal dari apa yang kamu miliki, bukan pula berasal dari siapa diri kamu, atau apa yang kamu kerjakan. Bahagia dan tak bahagia berasal dari pikiran kamu.",
+    "Sakit dalam perjuangan itu hanya sementara. Bisa jadi kamu rasakan dalam semenit, sejam, sehari, atau setahun. Namun jika menyerah, rasa sakit itu akan terasa selamanya.",
+    "Hanya seseorang yang takut yang bisa bertindak berani. Tanpa rasa takut itu tidak ada apapun yang bisa disebut berani.",
+    "Jadilah diri kamu sendiri. Siapa lagi yang bisa melakukannya lebih baik ketimbang diri kamu sendiri?",
+    "Kesempatan kamu untuk sukses di setiap kondisi selalu dapat diukur oleh seberapa besar kepercayaan kamu pada diri sendiri.",
+    "Kebanggaan kita yang terbesar adalah bukan tidak pernah gagal, tetapi bangkit kembali setiap kali kita jatuh.",
+    "Suatu pekerjaan yang paling tak kunjung bisa diselesaikan adalah pekerjaan yang tak kunjung pernah dimulai.",
+    "Pikiran kamu bagaikan api yang perlu dinyalakan, bukan bejana yang menanti untuk diisi.",
+    "Kejujuran adalah batu penjuru dari segala kesuksesan. Pengakuan adalah motivasi terkuat. Bahkan kritik dapat membangun rasa percaya diri saat “disisipkan” di antara pujian.",
+    "Hidup ini hanya sekali dan peluang itu juga sekali munculnya, keduanya tidak datang dua kali.",
+    "Karena perjuangan adalah tanda perjalananmu menuju sukses.",
+    "Dunia tak lagi sama tak selamanya memihak kita, di saat kita mau berusaha di situlah kebahagiaan akan indah pada waktunya.",
+    "Hidup tak semudah membalikkan telapak tangan, tetapi dengan telapak tangan kita dapat mengubah hidup kita jauh lebih baik lagi.",
+    "Jadilah pribadi yang menantang masa depan, bukan pengecut yang aman di zona nyaman.",
+    "Belajarlah rendah hati, rendahkan hatimu serendah-rendahnya hingga tidak ada seorangpun yang bisa merendahkanmu.",
+    "Keyakinan merupakan suatu pengetahuan di dalam hati, jauh tak terjangkau oleh bukti.",
+    "Sakit dalam perjuangan itu hanya sementara. Bisa jadi kamu rasakan dalam semenit, sejam, sehari, atau setahun. Namun jika menyerah, rasa sakit itu akan terasa selamanya.",
+    "Kekuatan dan perkembangan datang hanya dari usaha dan perjuangan yang terus menerus.",
+    "Pengusaha itu bukan orang yang pintar tetapi mereka pintar mencari orang pintar.",
+    "Hidup itu sebentar. Kamu harus bisa tersenyum saat merasakan kepedihan atau kita tak akan pernah melanjutkan hidup.",
+    "Yang keren itu bukan anak muda yang banyak gaya, tapi anak muda yang banyak karya.",
+    "Hanya seseorang yang takut yang bisa bertindak berani. Tanpa rasa takut itu tidak ada apapun yang bisa disebut berani.",
+    "Siapapun yang berusaha menjatuhkanmu memang sudah berada di bawahmu.",
+    "Kesuksesan dan kegagalan adalah sama-sama bagian dalam hidup. Keduanya hanyalah sementara.",
+    "Ia yang mengerjakan lebih dari apa yang dibayar pada suatu saat akan dibayar lebih dari apa yang ia kerjakan.",
+    "Rahasia dari kesuksesan kita adalah bahwa kita tidak pernah menyerah.",
+    "Karena hidup adalah pilihan.",
+    "Memaafkan belum tentu membuat kita lebih baik atau bahkan merasa lebih baik tetapi yang jelas membuka jalan kebaikan.",
+    "Memaafkan belum tentu membuat kita lebih baik atau bahkan merasa lebih baik, tetapi yang jelas membuka jalan kebaikan.",
+    "Ujian kesetiaan selalu datang setiap hari, pastikan kamu setia kepada orang yang tepat.",
+    "Aku tak ingin membuatmu rindu padaku. Karena rindu itu artinya sedih. Dan aku tak ingin menjadi alasanmu bersedih.",
+    "Aku memilih memandangimu daripada segala lukisan yang ada di dunia.",
+    "Relasi itu seperti bunga yang membutuhkan air, bisa kering dan mati tanpa komunikasi.",
+    "Akan lebih baik bersabar menunggu seseorang datang menyapa daripada mengharapkan dia yang memilih pergi untuk kembali.",
+    "Mencintai itu butuh tenaga, jangan kau buang tenagamu untuk berlari dan menyerah.",
+    "Percayalah, jika dia memang cinta sejati kau, mau semenyakitkan apa pun, mau seberapa sulit liku yang harus dilalui, dia tetap akan bersama kau kelak, suatu saat nanti.",
+    "Cinta itu mempunyai kesanggupan yang hebat. Dia bisa membuat binatang menjadi manusia, dan manusia menjadi binatang.",
+    "Jauh sebelum aku bertemu denganmu, aku telah mengenalmu dalam doaku.",
+    "Cinta merupakan sesuatu yang indah, ia laksana sebuah lukisan di awan, cerah membingkai ufuk senja.",
+    "Semoga kelak selimutku adalah kamu yang senantiasa menghangatkanku di kala dingin menyerang tubuh dan jiwaku.",
+    "Aku menginginkanmu seutuhnya, selamanya, kamu dan aku, setiap hari.",
+    "Cinta itu burung yang indah, yang mengemis untuk ditangkap tapi menolak untuk dilukai.",
+    "Karena cinta, duri menjadi mawar. Karena cinta, cuka menjelma anggur segar.",
+    "Cinta tak berupa tatapan satu sama lain, tetapi memandang keluar bersama ke arah yang sama.",
+    "Cinta tidak terlihat dengan mata, tetapi dengan hati.",
+    "Kau pikir aku memperhatikanmu? Tidak, Sayang. Aku memperhatikan lingkunganmu, barangkali ada yang akan mengganggumu, kuhajar dia.",
+    "Cinta tidak pernah menuntut, cinta selalu memberi. Cinta selalu menderita, tanpa pernah meratap, tanpa pernah mendendam.",
+    "Cinta itu layaknya angin, aku tidak bisa melihatnya tetapi aku bisa merasakannya.",
+    "Cinta bukanlah bertahan seberapa lama. Tetapi seberapa jelas dan ke arah mana.",
+    "Sahabat yang baik tidak akan mencelakai, tetapi sahabat yang baik akan menasehati, melindungi, dan tulus mengasihi.",
+    "Hal terindah dari persahabatan adalah memahami dan dipahami, tanpa pernah memaksa dan ingin menang sendiri.",
+    "Jika kau mendapat sahabat sejati yang tak luntur baik dalam keadaan suka ataupun duka. Berjanjilah dalam hatimu untuk selalu setia padanya.",
+    "Persahabatan tidak perlu saling mengerti. Karena sahabat akan saling menerima hal yang tak bisa dimengerti.",
+    "Sahabat bukan mereka yang menghampirimu ketika butuh, namun mereka yang tetap bersamamu ketika seluruh dunia menjauh.",
+    "Persahabatan sejati itu layaknya kesehatan, nilainya baru kita sadari setelah kita kehilangannya.",
+    "Lebih baik ku menemani sahabat di kala sendiri daripada menemani kekasih yang tak mempunyai waktu untukku di kala ku sendiri dalam sepi.",
+    "Bersahabat bukan berarti kita mempercayainya, tapi bersahabat bagaimana kita dapat dipercaya olehnya. Kepercayaan itu penting.",
+    "Sahabat adalah orang yang akan membangunkan kita dari tidur walaupun sedang bermimpi indah.",
+    "Ketika dalam kesulitan, mereka menghilang, ketika dalam kebahagiaan, mereka datang dengan riang. Tidak, mereka bukan teman!",
+    "Setiap orang berbeda, unik dengan caranya. Kamu harus menghargainya, tapi tak berarti kamu harus menyukai semuanya.",
+    "Sahabat itu seperti halnya mata dan tangan. Saat mata menangis tangan mengusap, saat tangan terluka mata menangis.",
+    "Persahabatan yang didasari oleh keikhlasan hati dan kasih sayang, akan melahirkan keabadian dalam kebersamaan.",
+    "Jika kau mendapat sahabat sejati yang tak luntur baik dalam keadaan suka ataupun duka. Berjanjilah dalam hatimu untuk selalu setia padanya.",
+    "Bila esok tiba aku ingin seperti hari-hari sebelumnya. Hari-hari bersama sahabat dan teman-teman untuk bisa bersama melakukan hal-hal positif yang menyenangkan.",
+    "Apabila engkau menginginkan kemuliaan maka carilah sahabat dari orang orang yang takut kepada Allah subhanahu wataa'la.",
+    "Bisa jadi semua teman kita pergi, tapi tidak dengan sahabat",
+    "Persahabatan itu motivasi dan inspirasi, bukan hanya gengsi dan basa-basi.",
+    "Tak ada yang terasa semengerikan dulu saat kau sudah punya teman sejati.",
+    "Persahabatan tak terjalin dengan orang yang istimewa. Kita jadi istimewa karena bersahabat. Sahabatlah yang mengistimewakan kita."]
