@@ -251,7 +251,7 @@ let ftt = `*Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan sil
                 }, {
                   "title": "「 🏛️  」› Group Settings ",
                   "description": "Menampilkan fitur dari pengaturan grup",
-                  "rowId": ".? admin"
+                  "rowId": ".? group"
                 }, {
                   "title": "「 👥 」› Group ",
                   "description": "Menampilkan fitur dari group",
