@@ -19,7 +19,8 @@ ${'```%npmdesc```'}
  let handler = async (m, { conn, usedPrefix: _p, args, command }) => { 
   
    let tags 
-   let teks = `${args[0]}`.toLowerCase() 
+   let teks = `${args[0]}`.toLowerCase()
+   let botname =`${namabot}`
    let array = ['all', 'absen', 'rpg', 'anime', 'downloader', 'game', 'fun', 'xp', 'github', 'group', 'image', 'quotes', 'admin', 'info', 'internet', 'quran', 'cristian', 'kerang', 'maker',  'sound', 'vn', 'furry', 'owner', 'suara', 'premium', 'quotes', 'info', 'stalk', 'shortlink', 'sticker', 'tools', 'text', 'nsfw', 'asupan', 'random', 'textpro', 'photooxy'] 
    if (!array.includes(teks)) teks = '404' 
    if (teks == 'all') tags = { 
@@ -318,8 +319,8 @@ ${'```%npmdesc```'}
        } 
      }) 
      if (teks == '404') {
- 	let cute = `${pickRandom(['https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear','https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear','https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear'])}` 
- 	let ori = `┏━━━ꕥ〔 *${namabot}* 〕ꕥ━⬣
+  let cute = `${pickRandom(['https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear','https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear','https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear'])}` 
+  let ori = `┏━━━ꕥ〔 *${botname}* 〕ꕥ━⬣
 ┃✾ Hai, @${m.sender.split`@`[0]}!
 ┃
 ┃✾ Tersisa *${limit} Limit*
@@ -342,11 +343,11 @@ ${'```%npmdesc```'}
 ━━━ꕥ〔 _*Quotes Harian*_ 〕ꕥ━⬣
 “${pickRandom(global.quotes)}”`.trim()
 conn.sendMessage(m.chat, {
-    	react: {
-    		text: emot,
-    		key: m.key
-    	}
-    })	
+      react: {
+        text: emot,
+        key: m.key
+      }
+    })  
 return conn.send2ButtonLoc(m.chat, cute, ori, `Note : If You Use Old Wa Or Mod And Button It Doesn't Look Di Rectly Type ${_p}simplemenu`, 'COMMAND', '.simplemenu', 'DONASI', '.donasi', m)
     
     }
@@ -434,7 +435,7 @@ await conn.send2ButtonLoc(m.chat, await conn.resize(await (await fetch(flu + te
     bzz = await res.buffer()
   conn.sendFile(m.chat, bzz, 'haori.mp3', null, m, true, {
 type: 'audioMessage', 
-ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Fory : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@raraharsita2', thumbnail: await (await fetch('https://telegra.ph/file/8d216a35e2ac344d128f8.jpg')).buffer(),}} 
+ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Fory : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@raraharsita2', thumbnail: await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(),}} 
      })
 } catch (e) { 
      conn.reply(m.chat, 'Maaf, menu sedang error', m) 
