@@ -1,11 +1,11 @@
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-bear = "VBkM7rbU";
+bear = "9b95802c6f20";
   if (!text) return conn.reply(m.chat, `Gunakan format: ${usedPrefix}${command} Colin Changed`, m)
 
   await conn.sendButtonLoc(m.chat, 'https://telegra.ph/file/5a46383499a405792185b.jpg', 'Searching...', wm2, 'Owner', '.owner', m)
-    let res = await fetch(`https://saipul-anuar.herokuapp.com/api/tiktok?url=${text}&apikey=${bear}`)
+    let res = await fetch(`https://zenzapis.xyz/downloader/musically?apikey=${bear}&url=${text}`)
     let json = await res.json()
     if (res.status !== 200) throw await res.text()
     if (!json.status) throw json
