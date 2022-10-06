@@ -5,7 +5,7 @@ ${usedPrefix + command} good morning
 
 _Note:_
 Daftar bahasa yang didukung: Hanya Bahasa Inggris Ke Bahasa Indonesia`, m)
-  let res = await fetch(`https://saipulanuar.herokuapp.com/api/translate?kata=${text}&apikey=KingOfBear`)
+  let res = await fetch(`https://saipulanuar.herokuapp.com/api/translate?kata=${text}&apikey=${bearkey}`)
   if (!res.ok) throw eror
   let json = await res.json()
         m.reply(json.result.text)
