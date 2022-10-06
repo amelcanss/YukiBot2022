@@ -1,7 +1,8 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
+  bear = "9b95802c6f20";
   if (!args[0]) throw 'Uhm...url nya mana?'
-let res = await fetch(API('lol', '/api/tiktok', { url: args[0] }, 'apikey'))
+let res = await fetch(`https://zenzapis.xyz/downloader/musically?apikey=${bear}&url=${args[0]}`)
     let json = await res.json()
     
     m.reply(wait)
@@ -18,7 +19,7 @@ await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
      }}
   })
 let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
-    await conn.sendButtonVid(m.chat, json.result.link, txt, wm, `Audio`, `.tiktokaudio ${args[0]}`, m)
+    await conn.sendButtonVid(m.chat, json.result.nowm, txt, wm, `Audio`, `.tiktokaudio ${args[0]}`, m)
 }
 handler.help = ['tiktoknowm'].map(v => v + ' <url>')
 handler.tags = ['downloader', 'premium']
