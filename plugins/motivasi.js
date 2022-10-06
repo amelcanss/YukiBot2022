@@ -3,7 +3,7 @@ let vn = './motivasi.mp3'
 let handler  = async (m, { conn }) => {
 	let _uptime = process.uptime() * 1000
 	let uptime = clockString(_uptime)
-  conn.sendButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/cf60b26d891aab29019ac.jpg')).buffer(), `*────────「 Quotes 」 ────────*\n\n${pickRandom(global.motivasi)}`, '_*Quotes*_', 'Motivasi', `.motivasi`, m)
+  conn.sendButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/cf60b26d891aab29019ac.jpg')).buffer(), `*──────「 Quotes 」 ──────*\n\n${pickRandom(global.motivasi)}`, '_*Quotes*_', 'Motivasi', `.motivasi`, m)
 conn.sendFile(m.chat, vn, 'motivasi.mp3', null, m, true, {
 type: 'audioMessage', // paksa tanpa convert di ffmpeg
 ptt: true, contextInfo:{ externalAdReply: { title: 'Motivasi For You', body: `Haori Aktif Selama ${uptime}`, sourceUrl: `${pickRandom(['https://vt.tiktok.com/ZSdoxvMyp/', 'https://vt.tiktok.com/ZSdoxmRFv/', 'https://vt.tiktok.com/ZSdoxmuPx/'])}`, thumbnail: await (await fetch(fla + 'You')).buffer(),}} 
