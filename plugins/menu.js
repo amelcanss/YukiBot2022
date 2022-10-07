@@ -319,7 +319,7 @@ ${'```%npmdesc```'}
        } 
      }) 
      if (teks == '404') {
-  let cute = await conn.resize(await (await fetch(`https://i.ibb.co/DrWHm1N/IMG-20221007-WA0650.jpg`)).buffer(), 300, 200) 
+  let cute = await conn.resize(await (await fetch(`https://telegra.ph/file/6ab4daac226292a112540.jpg`)).buffer(), 300, 200) 
   let ori = `┏━━━ꕥ〔 *${botname}* 〕ꕥ━⬣
 ┃✾ Hai, @${m.sender.split`@`[0]}!
 ┃
