@@ -42,6 +42,7 @@ global.linkig = 'https://www.instagram.com/drak_ipul123'
 global.deslink = ''
 global.logo = 'https://telegra.ph/file/1665521d176fbf172d735.jpg'
 global.titlink = 'Subscribe My Channel'
+global.bearkey = 'KingOfBear'
 global.bodlink = '@drak_ipul123'
 
 global.wait = '_*𝐬𝐞𝐝𝐚𝐧𝐠 𝐝𝐢 𝐩𝐫𝐨𝐬𝐞𝐬 ...*_'
@@ -67,11 +68,11 @@ global.zt = '*'
 global.zc = ''
 
 global.thumbnailUrl = [
-  'https://telegra.ph/file/36a0eea244662009a31fa.jpg', 'https://telegra.ph/file/9449ac07cd01663296927.jpg',
-  'https://telegra.ph/file/2b17e549646873fd3aad7.jpg', 'https://telegra.ph/file/36a0eea244662009a31fa.jpg',
-  'https://telegra.ph/file/9449ac07cd01663296927.jpg', 'https://telegra.ph/file/2b17e549646873fd3aad7.jpg',
-  'https://telegra.ph/file/36a0eea244662009a31fa.jpg', 'https://telegra.ph/file/9449ac07cd01663296927.jpg',
-  'https://telegra.ph/file/2b17e549646873fd3aad7.jpg', 'https://telegra.ph/file/36a0eea244662009a31fa.jpg'
+  'https://telegra.ph/file/8a9b701299d73e8f469af.jpg', 'https://telegra.ph/file/e34575d14816877f97d96.jpg',
+  'https://telegra.ph/file/79bef580a4c20f39a61e5.jpg', 'https://telegra.ph/file/8a9b701299d73e8f469af.jpg',
+  'https://telegra.ph/file/e34575d14816877f97d96.jpg', 'https://telegra.ph/file/79bef580a4c20f39a61e5.jpg',
+  'https://telegra.ph/file/8a9b701299d73e8f469af.jpg', 'https://telegra.ph/file/e34575d14816877f97d96.jpg',
+  'https://telegra.ph/file/79bef580a4c20f39a61e5.jpg', 'https://telegra.ph/file/8a9b701299d73e8f469af.jpg'
 ]
 
 //============= Games ================//
