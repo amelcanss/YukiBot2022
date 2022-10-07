@@ -21,7 +21,7 @@ ${'```%npmdesc```'}
    let tags 
    let teks = `${args[0]}`.toLowerCase()
    let botname =`${namabot}`
-   let array = ['all', 'absen', 'rpg', 'anime', 'downloader', 'game', 'fun', 'xp', 'github', 'group', 'image', 'quotes', 'admin', 'info', 'internet', 'quran', 'cristian', 'kerang', 'maker',  'sound', 'vn', 'furry', 'owner', 'suara', 'premium', 'quotes', 'info', 'stalk', 'shortlink', 'sticker', 'tools', 'text', 'nsfw', 'asupan', 'random', 'textpro', 'photooxy'] 
+   let array = ['all', 'absen', 'rpg', 'anime', 'downloader', 'game', 'fun', 'xp', 'github', 'image', 'quotes', 'info', 'internet', 'quran', 'cristian', 'kerang', 'maker',  'sound', 'vn', 'furry', 'owner', 'suara', 'premium', 'quotes', 'info', 'stalk', 'group', 'shortlink', 'sticker', 'tools', 'text', 'nsfw', 'asupan', 'random', 'textpro', 'photooxy'] 
    if (!array.includes(teks)) teks = '404' 
    if (teks == 'all') tags = { 
    'main': 'UTAMA', 
@@ -85,9 +85,6 @@ ${'```%npmdesc```'}
    if (teks == 'github') tags = { 
    'github': 'GITHUB', 
    } 
-   if (teks == 'group') tags = { 
-   'group': 'GROUP', 
-   } 
    if (teks == 'image') tags = { 
    'image': 'IMAGE', 
    }
@@ -141,6 +138,9 @@ ${'```%npmdesc```'}
    if (teks == 'stalk') tags = { 
    'stalk': 'STALK', 
    } 
+   if (teks == 'group') tags = { 
+   'group': 'GROUP', 
+   }
    if (teks == 'shortlink') tags = { 
    'shortlink': 'SHORT LINK', 
    } 
@@ -319,7 +319,7 @@ ${'```%npmdesc```'}
        } 
      }) 
      if (teks == '404') {
-  let cute = `${pickRandom(['https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear','https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear','https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear', 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=200&scaleHeight=111&fontsize=100&text=King%20Of%20Bear'])}` 
+  let cute = await conn.resize(await (await fetch(`https://i.ibb.co/DrWHm1N/IMG-20221007-WA0650.jpg`)).buffer(), 300, 200) 
   let ori = `┏━━━ꕥ〔 *${botname}* 〕ꕥ━⬣
 ┃✾ Hai, @${m.sender.split`@`[0]}!
 ┃
