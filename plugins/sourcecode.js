@@ -13,7 +13,7 @@ await conn.sendButtonLoc(m.chat, await conn.resize(await (await fetch(flu + `${c
  
 ┏━━━ꕥ〔 *SCRIPT BOT* 〕ꕥ━⬣
 ┃✾ 📮*Script :* 
-┃✾ ╰ https://youtu.be/lDSHQvws9N0
+┃✾ ╰ https://youtu.be/pwLZpdfO8AU
 ┃✾ 📮*Tiktok :*  
 ┃✾ ╰ https://www.tiktok.com/@raraharsita2/video/7144195854117637402
 ┗━━━━━━ꕥ
