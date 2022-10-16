@@ -36,7 +36,7 @@ global.APIKeys = { // APIKey Here
 }
 
 global.linkyt = 'https://youtu.be/PPLlC5NWAuE'
-global.WM = '𝑴𝒚𝑩𝒐𝒕-𝑴𝒖𝒍𝒕𝒊 𝑫𝒆𝒗𝒊𝒄𝒆 𝑩𝒚 King Of Bear'
+global.WM = '𝑴𝒚𝑩𝒐𝒕-𝑴𝒖𝒍𝒕𝒊 𝑫𝒆𝒗𝒊𝒄𝒆 𝑩𝒚 RiellCuy'
 global.linkgc = 'https://chat.whatsapp.com/HAZ6yFgCafUAeDbNH33IrL'
 global.linkig = 'https://www.instagram.com/drak_ipul123'
 global.deslink = ''
