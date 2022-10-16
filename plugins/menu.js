@@ -338,7 +338,7 @@ ${'```%npmdesc```'}
 ┃✾ Uptime: *${uptime} (${muptime})*
 ┃✾ Database: ${rtotalreg} dari ${totalreg}
 ┃✾ Youtube:
-┃✾ https://youtu.be/lDSHQvws9N0
+┃✾ https://youtu.be/RIELLBOTZ OFFC
 ┗━━━━━━ꕥ
 ━━━ꕥ〔 _*Quotes Harian*_ 〕ꕥ━⬣
 “${pickRandom(global.quotes)}”`.trim()
@@ -435,7 +435,7 @@ await conn.send2ButtonLoc(m.chat, await conn.resize(await (await fetch(flu + te
     bzz = await res.buffer()
   conn.sendFile(m.chat, bzz, 'haori.mp3', null, m, true, {
 type: 'audioMessage', 
-ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Fory : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@raraharsita2', thumbnail: await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(),}} 
+ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Wahyu : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok'])}`, sourceUrl: 'https://www.tiktok.com/@raraharsita2', thumbnail: await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(),}} 
      })
 } catch (e) { 
      conn.reply(m.chat, 'Maaf, menu sedang error', m) 
