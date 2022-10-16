@@ -31,18 +31,18 @@ module.exports = {
         global.img = 'https://i.ibb.co/jfZVKmC/babi2.jpg'
         global.fla = pickRandom(global.flaaa)
         global.namabot = conn.user.name
-        global.packname = '© YukiBot-MD'
-        global.author = 'Made By King Of Bear © 2022'
+        global.packname = '© Rɪᴇʟʟ X WAʜʏᴜ Aɴɪᴍᴇᴋ'
+        global.author = 'Made By Rɪᴇʟʟ X WAʜʏᴜ Aɴɪᴍᴇᴋ © 2022'
         global.packname2 = 'Made With'
-        global.author2 = 'YukiBot By King Of Bear © 2022'
-        global.wm3 = '·͟͟͟͟͟͟͞͞͞͞͞͞Made By King Of Bear˚'
-        global.wm2 = '© YukiBot-MD' + ' ' + 'By King Of Bear'
-        global.wm = '© YukiBot-MD'
+        global.author2 = 'Aʏᴜʙᴏᴛᴢ By Rɪᴇʟʟ X WAʜʏᴜ Aɴɪᴍᴇᴋ © 2022'
+        global.wm3 = '·͟͟͟͟͟͟͞͞͞͞͞͞Made By WAʜʏᴜ X Rɪᴇʟʟ˚'
+        global.wm2 = '© Khurushi-MD' + ' ' + 'By Riellcuy'
+        global.wm = '© Rɪᴇʟʟ X WAʜʏᴜ Aɴɪᴍᴇᴋ-MD'
         global.colong1 = 'Ciss 📸'
-        global.colong2 = 'By yukiBot & King Of Bear'
+        global.colong2 = 'By Rɪᴇʟʟ & Wᴀʜʏᴜ'
         global.kontak2 = [
-        ['6288279268363', 'King Of Bear', 'Creator Bot', 'KingOfBear@support.com', true],
-        ['13146176930', 'YukiBot-MD', 'Bot WhatsApp', 'Just Bot', true]
+        ['6282146218274', 'RiellCuyy', 'Creator Bot', 'KingOfBear@support.com', true],
+        ['628816701320', 'Wahyuuu🤍', 'Cewenya acu:3', 'Just Bot', true]
         ]
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
@@ -646,7 +646,7 @@ module.exports = {
                                 member: groupMetadata.participants.length
                             })
                             /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
-   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'Selamat Datang' : 'Sampai Jumpa', action === 'add' ? '.intro' : 'YukiBot-MD', fkontak,{
+   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'Selamat Datang' : 'Sampai Jumpa', action === 'add' ? '.intro' : 'Rɪᴇʟʟ X WAʜʏᴜ ᴀɴɪᴍᴇᴋ', fkontak,{
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
     mediaUrl: linkyt,
