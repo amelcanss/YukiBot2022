@@ -13,13 +13,13 @@ await conn.sendButtonLoc(m.chat, await conn.resize(await (await fetch(flu + `${c
  
 ┏━━━ꕥ〔 *SCRIPT BOT* 〕ꕥ━⬣
 ┃✾ 📮*Script :* 
-┃✾ ╰ https://youtu.be/pwLZpdfO8AU
-┃✾ 📮*Tiktok :*  
-┃✾ ╰ https://www.tiktok.com/@raraharsita2/video/7144195854117637402
+┃✾ ╰ Ada digithub tapi gw private
+┃✾ 📮*instagram :*  
+┃✾ ╰ @riellxd_04
 ┗━━━━━━ꕥ
 `,`📍 *N o t e :* 
-• Jangan lupa minta izin owner sebelum menggunakan scriptnya kak!
-• Jangan Lupa kasih Like & Follow My Tiktok
+• mau ngapain bamg?
+• Jangan Lupa follow ig owber
 
 Official By @${'0'.split('@')[0]}
 Powered By @${`${global.owner[0]}`.split('@')[0]}`, 'Pemilik Bot', '#owner')
@@ -28,7 +28,7 @@ let res = await fetch(`https://github.com/saipulanuar/Api-Github/raw/main/audio/
 bzz = await res.buffer()
   conn.sendFile(m.chat, bzz, 'haori.mp3', null, m, true, {
 type: 'audioMessage', 
-ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Fory : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@raraharsita2', thumbnail: await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(),}} 
+ptt: true, contextInfo:{ externalAdReply: { title: `💌 Ultah Wahyu🤍 : ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik`, body: `${pickRandom(['Follow Tiktok'])}`, sourceUrl: 'https://www.tiktok.com/@raraharsita2', thumbnail: await (await fetch('https://i.ibb.co/jfZVKmC/babi2.jpg')).buffer(),}} 
      })
 }
 handler.help = ['sourcecode']
